@@ -1,8 +1,9 @@
 from utils.utilities import Utils
+from appium.webdriver.common.appiumby import AppiumBy
 
 class Dashboard:
-    views_ele = '//android.widget.TextView[@content-desc="Views"]'
-    web3_ele = '//android.widget.TextView[@content-desc="WebView3"]'
+    views_ele = (AppiumBy.XPATH,'//android.widget.TextView[@content-desc="Views"]')
+    web3_ele = (AppiumBy.XPATH,'//android.widget.TextView[@content-desc="WebView3"]')
 
     def __init__(self,driver):
         self.driver = driver

@@ -12,6 +12,16 @@ class Views_pg(Dashboard):
     radio_button1_ele = (AppiumBy.XPATH,'//android.widget.RadioButton[@content-desc="RadioButton 1"]')
     radio_button2_ele =(AppiumBy.XPATH,'//android.widget.RadioButton[@content-desc="RadioButton 2"]')
     hint_text_ele = (AppiumBy.XPATH,'//android.widget.EditText[@resource-id="io.appium.android.apis:id/edit"]')
+    star_button_ele = (AppiumBy.XPATH,'//android.widget.CheckBox[@content-desc="Star"]')
+    on_off_toggle_button_ele = (AppiumBy.XPATH,'//android.widget.ToggleButton[@resource-id="io.appium.android.apis:id/toggle1"]')
+    on_off_toggle_button2_ele = (AppiumBy.XPATH,'//android.widget.ToggleButton[@resource-id="io.appium.android.apis:id/toggle2"]')
+    # dropdown_ele = (AppiumBy.XPATH,'//android.widget.Spinner[@resource-id="io.appium.android.apis:id/spinner1"]')
+    dropdown_ele = (AppiumBy.CLASS_NAME,'android.widget.Spinner')
+    dropdown_options = (AppiumBy.CLASS_NAME,'android.widget.CheckedTextView')
+    # dropdown_options = (AppiumBy.XPATH,'//android.widget.CheckedTextView[@resource-id="android:id/text1" and @text="Venus"]')
+
+
+
     def click_on_constrols(self):
         ut = Utils(self.driver)
         ut.clicking_on_ele(self.controls_ele)
@@ -24,3 +34,4 @@ class Views_pg(Dashboard):
         self.navigate_to_controls()
         ut = Utils(self.driver)
         ut.clicking_on_ele(self.light_theme_ele)
+

@@ -1,4 +1,5 @@
 from utils.utilities import Utils
+
 from pages.views_pg_flow.date_widges import Datewidges
 import pytest
 
@@ -14,7 +15,7 @@ class TestDateWidges:
         dw.click_on_dialogue()
         ut.clicking_on_ele(dw.change_date_ele)
         ele = ut.return_ele(dw.calender_header_ele)
-        print(ele.text)
+        print(ele)
         ut.took_screenshot(self.folder+'date.png')
 
 

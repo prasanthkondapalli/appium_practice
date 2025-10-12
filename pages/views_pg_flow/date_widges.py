@@ -2,6 +2,7 @@ from pages.views_page import Views_pg
 from utils.utilities import Utils
 from appium.webdriver.common.appiumby import AppiumBy
 # from appium.webdriver.common.
+from selenium.webdriver.common.by import By
 
 
 
@@ -9,9 +10,9 @@ class Datewidges(Views_pg):
     # folder = r'./reports/'
     date_widges_ele = (AppiumBy.ANDROID_UIAUTOMATOR,'new UiSelector().text("Date Widgets")')
     dialogue_ele = (AppiumBy.XPATH,'//android.widget.TextView[@content-desc="1. Dialog"]')
-    change_date_ele = (AppiumBy.XPATH,'//android.widget.Button[@content-desc="change the date"]')
+    change_date_ele = (By.XPATH,'//android.widget.Button[@content-desc="change the date"]')
     calender_ele = (AppiumBy.XPATH,'//android.view.View[@resource-id="android:id/month_view"]')
-    calender_header_ele = (AppiumBy.ANDROID_UIAUTOMATOR,'new UiSelector().resourceId("android:id/date_picker_header_date")')
+    calender_header_ele = (AppiumBy.XPATH,'//android.widget.TextView[@resource-id="android:id/date_picker_header_date"]')
 
 
     def navigate_to_datewidges(self):

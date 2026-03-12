@@ -57,3 +57,11 @@ class Utils:
         ele.clear()
         ele.send_keys(text)
         return ele
+
+    def bool_element_found(self,ele):
+        e =self.return_ele(ele)
+        if e is None:
+            return False
+        else:
+            return True
+
